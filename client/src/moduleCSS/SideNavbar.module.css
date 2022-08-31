@@ -1,0 +1,61 @@
+.logo{
+    width: auto;
+    max-height: 40px;
+}
+.TopnavbarList{
+    display: flex;
+    list-style: none;
+    /* justify-content: space-between; */
+    margin-bottom: 30px;
+    padding: 10px 5%;
+    border-bottom: 1px solid #e6e6e6;
+}
+.TopnavbarList li{
+    width: 20%;
+    text-align: center;
+    align-self: center;
+}
+.SideNavbar{
+    background-color: #f7f7f7;
+    border-right: 1px solid #e6e6e6;
+    height: 100vh;
+    width: 25%;
+    position: fixed;
+    /* border-bottom: 1px solid #e6e6e6; */
+}
+.MainMenu h6{
+    color: #9f9f9f;
+}
+.MainMenu ul{
+    list-style: none;
+}
+.MenuList li:hover, MenuList a:hover{
+    background-color: white;
+    color: cornflowerblue;
+}
+.MenuList a{
+    color: #6F6F6F;
+    text-decoration: none;
+}
+.MenuList li {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    padding: 10px;
+    padding-left: 30px;
+    color: #6F6F6F;
+    font-weight: 500;
+}
+.MenuList li span{
+    font-size: 18px;
+    margin-left: 8px;
+}
+.MenuList{
+    padding-left: 0;
+}
+.subMainMenu li{
+    padding: 5px 0 5px 28px;
+}
+.subMainMenu li:hover{
+    background-color: #F7F7F7;
+}

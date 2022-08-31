@@ -1,0 +1,13 @@
+.bookForm input{
+    width: -webkit-fill-available;
+    border: none;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    outline: none;
+    padding: 5px 10px;
+}
+.bookForm label{
+    width: -webkit-fill-available;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}

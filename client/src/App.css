@@ -1,0 +1,14 @@
+*{
+    font-family: 'poppins';
+}
+/*  navbar css */
+.topAmdinArrowIcon{
+    margin: 0px 6px -1px 6px;
+}
+.topNotificationIcon{
+    color: #7a7a7a;
+    margin: 1px 20px 0 0;
+}
+.mainContentContainer{
+    padding: 0 2%;
+}

@@ -1,0 +1,109 @@
+.Loginbox {
+    width: 52%;
+    margin: 7% auto 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(206, 206, 206);
+}
+
+.imageContainer{
+    background: #18aefa;
+    background-image: url("../images/loginSide.jpg");
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.loginForm{
+    display: inline-block;
+}
+.formContainer{
+   text-align: center; 
+}
+
+.loginForm input, .loginForm button{
+    width: 310px;
+    height: 36px;
+    margin-top: 20px;
+}
+.loginForm input{
+    border-radius: 3px;
+    padding: 0px 14px 3px;
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid rgb(218, 218, 218);
+}
+.loginForm input:focus-visible{
+    border: 1px solid #FFBC53;
+    /* outline: 1px solid #FFBC53; */
+}
+.loginForm button{
+    border: none;
+    background-color: #FFBC53;
+    color: white;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.loginForm button:hover{
+    background-color: #18aefa;
+}
+.forgetPassword{
+    color: rgb(163, 163, 163);
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.orBox{
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    /* width: 310px; */
+}
+.orLine{
+    background-color: #e5e5e5;
+    height: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+    /* position: absolute; */
+}
+.Or{
+    background-color: #fff;
+    display: block;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: -2px;
+    width: 42px;
+}
+.InnerContainer{
+    padding: 0 10.5%;
+}
+.LoginFromFacebookIcon{
+    margin: 0 4px;
+}
+.loginWith{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginWith p{
+    color: rgb(163, 163, 163);
+    margin: 10px 2px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.registerNew p{
+    color: rgb(163, 163, 163);
+    margin: 10px 2px;
+    font-weight: 500;
+    font-size: 16px;
+}

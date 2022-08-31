@@ -1,0 +1,71 @@
+.cardIconContainer div{
+    background-color: #fcba38;
+    border-radius: 12px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardIconContainer{
+    align-self: center;
+    text-align: -webkit-center;
+}
+.cardTextContainer{
+    align-self: center;
+}
+.cardTextContainer h2, .cardTextContainer h6{
+    margin-bottom: 0;
+}
+.tcard >div.row{
+    height: 100px;
+}
+.tcard{
+    /* text-align: center; */
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 24%;
+    background-color: #ffe8ba;
+    padding: 20px 0;
+    border: 1px solid #fcba38;
+}
+.tcard:nth-child(2){
+    background-color: #c8ecff;
+    border: 1px solid #19AFFB;
+}
+.tcard:nth-child(3){
+    background-color: #ffd7cc;
+    border: 1px solid #F46841;
+}
+.tcard:nth-child(4){
+    background-color: #d5d4ff;
+    border: 1px solid #6E6BFA;
+}
+.totalCards{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.adminContainer{
+    padding: 0 2%;
+}
+.quickViewTables{
+    border: 1px solid #eaeaea;
+    margin-top: 30px;
+}
+.quickViewTablesCol:nth-child(1){
+    padding-right: 13px !important;
+}
+.quickViewTablesHeader{
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 25px 7px;
+}
+.quickViewTableDiv{
+    /* border: 1px solid #eaeaea; */
+    padding: 25px;
+}
+.quickViewTableDiv table thead tr{
+    background-color: #F7F7F7;
+}
