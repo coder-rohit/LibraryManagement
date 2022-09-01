@@ -6,12 +6,3 @@ I have used React.js for the client-side and Node (Express) for server-side whic
 My WebApp starts with a Login page if someone has not already loggedin. Then after entering right creadentials it redirects to dashboard. In dashboard we can register new Books or deregister old books, alter details of existing books and same in case of students. There is a search box in center of navbar in which we can search a book or student using its name. Search-box show results without submitting. Basically this webapp has all CRUD functions.
 
 In back-end APIs are created in Node.js which sends and receives data from database. And In front-end I am using a npm-package Axios to fetch APIs. For login and logout I am using react-cookie and only function based components in used throughout this WebApp.
-
-I created a project named Library Management which is based on MERN Stack
-The motive of this project is to make it easy for the librarian to efficiently manage activities in the library related to books and students.
-
-I have used React.js for the client-side and Node (Express) for the server side which is connected to a database (MongoDB).
-
-My WebApp starts with a Login page if someone has not already logged in. Then after entering the right credentials it redirects to the dashboard. In the dashboard, we can register new Books or deregister old books, alter details of existing books, and the same in the case of students. There is a Search-box in the center of the navbar in which we can search a book or student using its name. Search-box shows results without submitting. This web app has all CRUD functions.
-
-In the back-end, APIs are created in Node.js which sends and receives data from the database. And In the front end, I am using an npm-package Axios to fetch APIs. For login and logout I am using react-cookie, and only function-based components are used throughout this WebApp.
