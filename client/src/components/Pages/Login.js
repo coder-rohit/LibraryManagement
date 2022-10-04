@@ -10,7 +10,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import 'animate.css';
 import { useCookies } from 'react-cookie'
- 
+
 export default function Login() {
 
     const [cookie, setCookie] = useCookies(['username']);
@@ -20,7 +20,7 @@ export default function Login() {
     useEffect(() => {
         cookie.username !== "undefined" && navigate("/admin", { replace: true });
     },)
-    
+
     const [creds, setCreds] = useState({ username: "", password: "" })
 
     const handleCredInputs = (e) => {
@@ -42,9 +42,9 @@ export default function Login() {
                 },
             })
             .then(({ data }) => {
-                (data === true) ? setCookie('username', creds.username, [{path: '/', maxAge : 1000}]) : wrongPassword()
+                (data === true) ? setCookie('username', creds.username, [{ path: '/', maxAge: 1000 }]) : wrongPassword()
             })
-            .catch(function(error){
+            .catch(function (error) {
                 console.log(error.message)
                 alert("Cannot Connect to Database, Check your internet ")
             })
@@ -93,6 +93,8 @@ export default function Login() {
                                 <IconContext.Provider value={{ color: "#4B75BD", size: "34px" }}>
                                     <span className={style.LoginFromFacebookIcon}><FaFacebookSquare /></span>
                                 </IconContext.Provider>
+                                
+
                                 <IconContext.Provider value={{ color: "#FE5240", size: "34px", style: {} }}>
                                     <span className={style.LoginFromGoogleIcon}><FaGooglePlusSquare /></span>
                                 </IconContext.Provider>

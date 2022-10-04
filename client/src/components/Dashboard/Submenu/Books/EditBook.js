@@ -30,7 +30,7 @@ export default function EditBook() {
             bid: e.target.value
         })
             .then(function (response) {
-                setbook({ ...book, bid: e.target.value, name: response.data[0].name, author: response.data[0].author, cost: response.data[0].cost, quantity: response.data[0].quantity, })
+                setbook({ ...book, bid: e.target.value, name: response.data[0].name, author: response.data[0].author, cost: response.data[0].cost, quantity: response.data[0].quantity, discount: response.data[0].discount, })
             })
             .catch(function (error) {
                 console.log(error);
@@ -57,7 +57,7 @@ export default function EditBook() {
                     <SideNavbar />
                 </Col>
                 <Col xl={9}>
-                    <Navbar page="Student" />
+                    <Navbar page="Book" placeholder="Book ID or Name"/>
                     <div className="mainContentContainer">
                         <h2>Welcome, {cookie.username} </h2>
                         <h6 style={{ color: "grey" }}>Edit Book ID and it's details will pop up in inputs</h6>
@@ -98,7 +98,8 @@ export default function EditBook() {
                                             <label htmlFor="cost">Cost</label>
                                         </td>
                                         <td>
-                                            <input type="number" onChange={handleInputs} name="cost" value={book.cost} placeholder="Enter Cost" />
+                                            <input type="number" style={{width: "50%", borderRight: "1px solid rgb(210, 210, 210)"}} onChange={handleInputs} name="cost" value={book.cost} placeholder="Enter Cost" />
+                                            <input type="number" style={{width: "50%"}} onChange={handleInputs} name="discount" value={book.discount} placeholder="Enter Discount" />
                                         </td>
                                     </tr>
                                     <tr>

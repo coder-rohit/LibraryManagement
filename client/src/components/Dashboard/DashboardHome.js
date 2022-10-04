@@ -9,6 +9,7 @@ import SideNavbar from '../Navbars/SideNavbar'
 import { useEffect, useState } from 'react'
 //cookies
 import { useCookies } from 'react-cookie'
+import Footer from '../Navbars/Footer'
 // axios
 const axios = require('axios').default;
 
@@ -40,7 +41,7 @@ export default function Dashboard() {
                     <SideNavbar />
                 </Col>
                 <Col xl={9}>
-                    <Navbar page="Book"/>
+                    <Navbar page="Book" placeholder="Book ID, Name or Author"/>
                     <div className="mainContentContainer">
                         <h2>Welcome, {apiData.adminName} </h2>
                         <h6 style={{ color: "grey" }}>Dashboard</h6>
@@ -215,7 +216,9 @@ export default function Dashboard() {
                             </div>
                         </Col>
                     </div>
+                    <Footer/>
                 </Col>
+
             </Row>
         </>
     )

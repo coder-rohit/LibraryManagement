@@ -17,7 +17,7 @@ export default function SideNavbar() {
                 </ul>
             </nav>
             <div className={style.MainMenu}>
-                <ul style={{ marginBottom: "0" }}>
+                <ul style={{ marginBottom: "0", listStyle: "none"}}>
                     <li>
                         <h6>Main Menu</h6>
                     </li>
@@ -53,7 +53,7 @@ export default function SideNavbar() {
                         <Link to="/bookHome"><li>Books Inventory</li></Link>
                         <Link to="/editBook"><li>Book Edit</li></Link>
                         <Link to="/addBook"><li>Add New Book</li></Link>
-                    </ul>
+                    </ul>                  
                 </ul>
             </div>
         </div>

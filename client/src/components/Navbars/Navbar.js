@@ -59,10 +59,10 @@ const Navbar = (props) => {
                     <ul className={style.TopnavbarList}>
                         <li id='searchDIV'>
                             <div className={style.searchDiv}>
-                                <input type="text" value={searchKeyword} name='search' onFocus={SearchFocused} onBlur={SearchDeFocused} onChange={(e) => searchFunction(e)} placeholder={`Type ${props.page} Name Here`} />
+                                <input type="text" value={searchKeyword} name='search' onFocus={SearchFocused} onBlur={SearchDeFocused} onChange={(e) => searchFunction(e)} placeholder={`Type ${props.placeholder}`} />
                                 {searchResults && <div id='searchResultDIV' className={style.SearchResults}>
                                     {
-                                        <Table hover bordered style={{ marginBottom: "0" }} className="animate__animated animate__fadeInUpBig">
+                                        <Table hover bordered style={{ marginBottom: "0" }} className="animate__animated animate__fadeIn">
                                             <tbody>
                                                 {
                                                     (searchResults.length === 0) ? <tr>

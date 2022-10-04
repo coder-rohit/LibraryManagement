@@ -1,0 +1,91 @@
+.CardImage{
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    
+}
+.CardImage img{
+    height: 250px;;
+    /* max-width: 110px; */
+}
+.CardDetails{
+    padding: 10px 18px;
+}
+.CardDetails h6{
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.CardPrice{
+    margin-top: 5px;
+}
+.CardDetails p{
+    font-size: 12px;
+}
+.bid{
+    position: absolute;
+    background-color: #fc3838;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 9px;
+}
+.CardPrice{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.CardPrice h5{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.CardPrice p{
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: line-through;
+    color: #979797;
+}
+.discount{
+    font-size: 12px;
+    color: green;
+    margin-left: 10px;
+}
+.actionBTN{
+    border: none;
+    background-color: unset;
+    font-style: italic;
+    color: rgb(4, 0, 255);
+    text-decoration: underline;
+    /* text-shadow: 0px 0px 10px rgb(219, 219, 219); */
+}
+.actionBTN:hover{
+    color: red;
+    /* text-shadow: 0px 0px 10px rgb(99, 99, 99); */
+}
+.dialogModal{
+    max-width: 70%;
+}
+.AddStudentToBook{
+    padding-left: 20px;
+}
+.AddStudentToBook div:nth-child(1){
+    position: relative;
+    margin-top: 14px;
+}
+.AddStudentToBook div button{
+    position: absolute;
+    right: 9px;
+    top: 2px;
+    border: none;
+    background-color: unset;
+}
+.AddStudentToBook div input{
+    width: 100%;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(206, 206, 206);
+}

@@ -5,7 +5,6 @@ import { Row, Col } from 'react-bootstrap'
 import { useState } from "react"
 import axios from "axios"
 import style from '../../../../moduleCSS/EditBook.module.css'
-// import style2 from '../../../../moduleCSS/Admin.module.css'
 import { useCookies } from 'react-cookie'
 
 export default function Editstudent() {
@@ -56,7 +55,7 @@ export default function Editstudent() {
                     <SideNavbar />
                 </Col>
                 <Col xl={9}>
-                    <Navbar page="Student" />
+                    <Navbar page="Student"  placeholder="Student ID or Name"/>
                     <div className="mainContentContainer">
                         <h2>Welcome, {cookie.username} </h2>
                         <h6 style={{ color: "grey" }}>Edit student ID and it's details will pop up in inputs</h6>

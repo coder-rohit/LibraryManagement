@@ -22,6 +22,11 @@
     width: 25%;
     position: fixed;
     /* border-bottom: 1px solid #e6e6e6; */
+    /* overflow: scroll; */
+}
+.MainMenu{
+    /* overflow: scroll; */
+    height: 100vh;
 }
 .MainMenu h6{
     color: #9f9f9f;

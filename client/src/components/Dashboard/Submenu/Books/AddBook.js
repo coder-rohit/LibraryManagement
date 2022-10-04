@@ -12,31 +12,39 @@ export default function AddBook() {
 
     const [cookie] = useCookies(['username'])
 
-    console.log(cookie)
-
     const [book, setbook] = useState({
-        name: "", author: "", cost: "", quantity: ""
+        name: "", author: "", cost: "", quantity: "", discount:""
     })
 
     const handleInputs = (e) => {
-        // e.preventDefault()
         let name = e.target.name
         let value = e.target.value
         setbook({ ...book, [name]: value })
     }
 
+    const [imgFile, setimgFile] = useState(null)
+
+    const formData = new FormData()
+    formData.append('bookImage', imgFile)
+
+    const handleImageInput = (e) =>{
+        setimgFile(e.target.files[0])
+    }
+
     const handleFormData = async (e) => {
         e.preventDefault()
-        console.log(book)
         axios.post('http://localhost:8001/addBook', {
             bookD: book
-        })
+        }, { headers: { 'contentType': "multipart/form-data" } })
             .then(function (res) {
                 alert(res.data)
             })
             .catch(function (error) {
                 console.log(error)
             })
+
+        axios.post('http://localhost:8001/uploadBookImage', formData, { headers: { 'contentType': "multipart/form-data" } } )
+        setbook({name: "", author: "", cost: "", quantity: "", discount:""})
     }
 
     return (
@@ -46,7 +54,7 @@ export default function AddBook() {
                     <SideNavbar />
                 </Col>
                 <Col xl={9}>
-                    <Navbar page="Student" />
+                    <Navbar page="Student" placeholder="Book ID or Name"/>
                     <div className="mainContentContainer">
                         <h2>Welcome, {cookie.username} </h2>
                         <h6 style={{ color: "grey" }}>Add New Book</h6>
@@ -54,7 +62,7 @@ export default function AddBook() {
                             <div className={style.tcard}>
                             </div>
                         </div>
-                        <form className={style.bookForm} onSubmit={handleFormData}>
+                        <form className={style.bookForm} onSubmit={handleFormData} encType="multipart/form-data" >
                             <Table bordered>
                                 <tbody>
                                     <tr>
@@ -78,7 +86,8 @@ export default function AddBook() {
                                             <label htmlFor="cost">Cost</label>
                                         </td>
                                         <td>
-                                            <input type="number" onChange={handleInputs} name="cost" value={book.cost} placeholder="Enter Cost" />
+                                            <input type="number" style={{width: "50%", borderRight: "1px solid rgb(210, 210, 210)"}} onChange={handleInputs} name="cost" value={book.cost} placeholder="Enter Cost" />
+                                            <input type="number" style={{width: "50%"}} onChange={handleInputs} name="discount" value={book.discount} placeholder="Enter Discount" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -91,9 +100,17 @@ export default function AddBook() {
                                     </tr>
                                     <tr>
                                         <td>
+                                            <label htmlFor="quantity">Image</label>
                                         </td>
                                         <td>
-                                            <Button style={{backgroundColor: "#18AEFA ", border: "none"}} type="submit">Update or Insert</Button>
+                                            <input type="file" onChange={handleImageInput} name="bookImage" placeholder="Upload Image" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <Button style={{ backgroundColor: "#18AEFA ", border: "none" }} type="submit">Update or Insert</Button>
                                         </td>
                                     </tr>
                                 </tbody>
